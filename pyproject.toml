@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fraudlens"
+version = "0.1.0"
+description = "An explainable, imbalanced-data fraud detection demo with model comparison, API scoring, and drift monitoring."
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.30,<1",
+  "streamlit>=1.40,<2",
+  "pandas>=2.2,<4",
+  "numpy>=2.0,<3",
+  "scikit-learn>=1.5,<2",
+  "joblib>=1.4,<2",
+  "plotly>=5.24,<7",
+]
+
+[tool.setuptools.packages.find]
+include = ["fraudlens*"]

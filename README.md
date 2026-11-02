@@ -19,6 +19,18 @@ FraudLens compares three machine learning models on an imbalanced synthetic tran
 - Local one-feature ablation attribution on individual API scores
 - Docker and Compose configuration
 
+## Live demo
+
+The Streamlit dashboard is deployed on Render: [Open FraudLens](https://fraudlens-dashboard.onrender.com).
+
+The hosted app uses generated synthetic transactions and is for demonstration only. It is not connected to a payment processor or live customer data, and its scores must not be used to authorize payments. Render's free service may spin down when idle and take about a minute to start on the next visit.
+
+The Render web service uses the repository's Dockerfile and starts the dashboard with:
+
+```bash
+streamlit run dashboard.py --server.address=0.0.0.0 --server.port=10000
+```
+
 ## Run locally
 
 Python 3.10 or later is required. From this directory:
